@@ -14,7 +14,7 @@ puts "Creating your ingredients"
 # Ingredient.create(name: "mint leaves")
 
 require 'open-uri'
-require 'JSON'
+# require 'JSON'
 
 url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 json = open(url).read
