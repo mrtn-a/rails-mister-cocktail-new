@@ -1,6 +1,6 @@
 <% content_for :nav, render('components/navbar-show') %>
 
-<div class="cocktail-show-background" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, crop: :fill %>')">
+<div class="cocktail-show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, crop: :fill %>')">
   <h1 class="text-center"><%= @cocktail.name %></h1>
 </div>
 
@@ -20,7 +20,7 @@
     <% end %>
   </ul>
   <hr>
-  <%= link_to "Go back", cocktails_path %> |
-  <%= link_to "Add ingredients",  new_cocktail_dose_path(@cocktail)%>
+  <%= link_to "Go back", cocktails_path, class: "btn btn-dark" %> |
+  <%= link_to "Add ingredients",  new_cocktail_dose_path(@cocktail), class: "btn btn-dark" %>
 
 </div>

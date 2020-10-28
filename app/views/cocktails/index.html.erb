@@ -12,13 +12,20 @@
   <h2>all cocktails</h2>
 
   <div class="d-flex justify-content-center mb-4">
+
+
+    <%= button_tag type: 'submit', class: "btn-search" do %>
+      <i class="fas fa-search"></i>
+    <% end %>
     <%= form_tag(cocktails_path, method: :get, class: 'form-inline') do %>
     <div class="form-group">
-      <%= text_field_tag :query, "", placeholder: "I'm looking for...", class: 'form-control mr-1' %>
+      <%= text_field_tag :query, "", placeholder: "I'm searching for...", class: 'form-control' %>
     </div>
-    <%= submit_tag "search", class: 'btn btn-secondary' %>
+
+
   <% end %>
-</div>
+  </div>
+
 
   <div class="row">
     <% @cocktails.each do |cocktail| %>
@@ -34,3 +41,5 @@
     <% end %>
   </div>
 </div>
+
+
