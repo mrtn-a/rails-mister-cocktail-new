@@ -1,0 +1,6 @@
+<%= simple_form_for [ @cocktail, @review ] do |f| %>
+  <%= f.input :name, label: "Name:", placeholder: "Your name.." %>
+  <%= f.input :content, label: "Review:", placeholder: "This cocktail is.." %>
+  <%= f.input :rating, label: "Rating:", :collection => %w[1 2 3 4 5] %>
+  <%= f.submit "Submit", class: "btn btn-dark" %>
+<% end %>

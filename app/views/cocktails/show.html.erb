@@ -34,19 +34,21 @@
       <h3>Reviews:</h3>
 
       <% if @cocktail.reviews.empty? %>
-        <p>There are no reviews for this cocktail yet.</p>
+        <p>There are no reviews for this cocktail yet. Add one!</p>
       <% end %>
 
-        <%  @cocktail.reviews.each do |review| %>
-          <div class="card-review">
-            <p class="p-1"> <%= review.name %> | Rating: <%= review.rating %></p>
-            <p class="p-1"> <%= review.content %> </p>
-          </div>
-        <% end %>
+
+      <%  @cocktail.reviews.each do |review| %>
+        <div class="card-review">
+          <p class="p-1"> <%= review.name %> | Rating: <%= review.rating %></p>
+          <p class="p-1"> <%= review.content %> </p>
+        </div>
+      <% end %>
+      <h3>Add a review</h3>
+      <%= render 'reviews/form' %>
     </div>
 
   <hr>
   <%= link_to "Go back", cocktails_path, class: "btn btn-dark" %> |
-  <%= link_to "Add ingredients",  new_cocktail_dose_path(@cocktail), class: "btn btn-dark" %> |
   <%= link_to "Add a review", new_cocktail_review_path(@cocktail), class: "btn btn-dark" %>
 </div>
