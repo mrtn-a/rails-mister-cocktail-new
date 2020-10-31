@@ -1,10 +1,4 @@
 class ReviewsController < ApplicationController
-  def new
-    # we need @restaurant in our `simple_form_for`
-    @cocktail = Cocktail.find(params[:cocktail_id])
-    @review = Review.new
-  end
-
   def create
     @review = Review.new(review_params)
     # we need `cocktail_id` to associate dose with corresponding cocktail

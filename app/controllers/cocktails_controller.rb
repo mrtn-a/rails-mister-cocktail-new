@@ -2,6 +2,10 @@ class CocktailsController < ApplicationController
   def index
     if params[:query]
       @cocktails = Cocktail.where("name ILIKE ?", "%#{params[:query]}%")
+      if @cocktails.count.zero?
+        @no_cocktails_found = "Couldn't find anything, check out all the cocktails below"
+        @cocktails = Cocktail.all
+      end
     else
       @cocktails = Cocktail.all
     end
@@ -9,6 +13,8 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find(params[:id])
+    @dose = Dose.new
+    @review = Review.new
   end
 
   def new
