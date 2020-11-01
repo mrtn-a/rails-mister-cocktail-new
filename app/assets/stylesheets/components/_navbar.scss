@@ -7,6 +7,13 @@
   background: transparent;
   box-shadow: 0 0 0 0;
   transition: 0.4s background-color ease;
+
+  font-family: $main-banner-font !important;
+
+  h4 {
+    font-family: $main-banner-font !important;
+  }
+
 }
 
 .navbar-lewagon.dark {

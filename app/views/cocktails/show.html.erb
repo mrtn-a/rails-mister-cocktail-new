@@ -1,7 +1,7 @@
 <% content_for :nav, render('components/navbar-show') %>
 
 <div class="cocktail-show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, crop: :fill %>')">
-  <h1 class="text-center"><%= @cocktail.name %></h1>
+  <h1 class="text-center"><%= @cocktail.name.downcase %></h1>
 </div>
 
 
