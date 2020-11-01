@@ -6,7 +6,7 @@
 
 
 <div class="container-show">
-  <div class="row">
+  <div class="row m-0">
     <div class="show-section col-12 col-lg-8 mt-4">
       <h3>Ingredients:</h3>
       <ul>
@@ -24,31 +24,33 @@
       </ul>
     </div>
 
-    <div class="show-section col-12 col-lg-4 mt-4">
-      <h3>Add a new ingredient:</h3>
+    <div class="show-section col-12 col-lg-4 mt-4 mb-4">
+      <h5>Add a new ingredient:</h5>
       <%= render 'doses/form' %>
     </div>
   </div>
 
-    <div class="show-section col-12 col-lg-8">
-      <h3>Reviews:</h3>
+  <div class="show-section col-12 col-lg-8 my-4">
+    <h3>Reviews:</h3>
 
-      <% if @cocktail.reviews.empty? %>
-        <p>There are no reviews for this cocktail yet. Add one!</p>
-      <% end %>
+    <% if @cocktail.reviews.empty? %>
+      <p class="my-4">There are no reviews for this cocktail yet. Add one!</p>
+    <% end %>
 
 
-      <%  @cocktail.reviews.each do |review| %>
-        <div class="card-review">
-          <p class="p-1"> <%= review.name %> | Rating: <%= review.rating %></p>
-          <p class="p-1"> <%= review.content %> </p>
-        </div>
-      <% end %>
-      <h3>Add a review</h3>
-      <%= render 'reviews/form' %>
-    </div>
+    <%  @cocktail.reviews.each do |review| %>
+      <div class="card-review mt-2">
+        <p class="p-1"> <%= review.name %> | Rating: <%= review.rating %></p>
+        <p class="p-1"> <%= review.content %> </p>
+      </div>
+    <% end %>
+    <br>
+    <h5 class="mt-4">Add a review</h5>
+    <%= render 'reviews/form' %>
+  </div>
+</div>
 
-  <hr>
-  <%= link_to "Go back", cocktails_path, class: "btn btn-dark" %> |
-  <%= link_to "Add a review", new_cocktail_review_path(@cocktail), class: "btn btn-dark" %>
+<hr>
+<div class="text-center my-4">
+  <%= link_to "Back to all cocktails", cocktails_path %>
 </div>

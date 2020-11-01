@@ -4,19 +4,28 @@
   align-items: center;
   height: 70px;
   padding: 0 25px;
-  background: #535B6E;
+  background: transparent;
+  box-shadow: 0 0 0 0;
+  transition: 0.4s background-color ease;
+}
+
+.navbar-lewagon.dark {
+  background: #949caa;
   box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
 
-.transparent {
-  background: transparent;
-  box-shadow: 0 0 0 0;
-}
-
-.navbar-lewagon .navbar-collapse {
+.transparent .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.transparent .navbar-brand img {
   width: 40px;
+}
+
+.navbar-lewagon-transparent-to-white {
+  background-color: white;
+
+  a.text-white {
+    color: black !important;
+  }
 }
