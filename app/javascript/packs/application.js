@@ -16,6 +16,8 @@ import 'bootstrap';
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+// navbar color change
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 
 document.addEventListener('turbolinks:load', () => {
@@ -23,6 +25,7 @@ document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
 });
 
+// turbolinks
 import { loadDynamicBannerText } from '../components/banner';
 
 document.addEventListener('turbolinks:load', () => {
@@ -32,3 +35,10 @@ document.addEventListener('turbolinks:load', () => {
 });
 
 
+// import { initSweetalert } from '../components/init_sweetalert';
+
+
+// initSweetalert('#sweet-alert-demo', {
+//   swal("Good job!", "You clicked the button!", "success");
+
+// });
