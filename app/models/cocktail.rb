@@ -6,4 +6,10 @@ class Cocktail < ApplicationRecord
   has_one_attached :photo
   validates :photo, presence: true
   validates :name, presence: true, uniqueness: true
+
+  before_save :capitalize_name
+
+  def capitalize_name
+    name.capitalize!
+  end
 end
