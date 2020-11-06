@@ -34,6 +34,12 @@ document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
 });
 
+import { initSelect2 } from '../components/init_select2';
+
+document.addEventListener("turbolinks:load", function() {
+  initSelect2();
+});
+
 
 // import { initSweetalert } from '../components/init_sweetalert';
 

@@ -29,3 +29,17 @@
   color: #222;
   padding-top: 0px;
 }
+
+// select2
+
+.select2-container--default .select2-selection--single {
+  background-color: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid #222 !important;
+  border-radius: 0 !important;
+  color: #222;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #aa6f79 !important;
+  }
